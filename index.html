@@ -1,140 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahmed & Hamza Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-
-body{
-  color:#fff;
-  animation:bgFade 8s ease-in-out infinite;
-}
+body{background:#0a0a0a;color:#fff;animation:bgFade 8s ease-in-out infinite;} 
 
 @keyframes bgFade{
-0%{background:linear-gradient(120deg,#000,#0f2027);} 
-50%{background:linear-gradient(120deg,#000,#2c5364);} 
-100%{background:linear-gradient(120deg,#000,#0f2027);} 
+0%{background:linear-gradient(120deg,#000000,#0f2027);} 
+25%{background:linear-gradient(120deg,#000000,#203a43);} 
+50%{background:linear-gradient(120deg,#000000,#2c5364);} 
+75%{background:linear-gradient(120deg,#000000,#1c1c1c);} 
+100%{background:linear-gradient(120deg,#000000,#0f2027);} 
+}
+25%{background:linear-gradient(120deg,#000,#333);}
+50%{background:linear-gradient(120deg,#000,#ffcc00);}
+75%{background:linear-gradient(120deg,#000,#333);}
+100%{background:linear-gradient(120deg,#000,#111);}
 }
 
-/* NAVBAR */
+@keyframes bgMove{
+0%{background:linear-gradient(120deg,#000,#1a1a1a);} 
+50%{background:linear-gradient(120deg,#000,#ffcc00);} 
+100%{background:linear-gradient(120deg,#000,#1a1a1a);} 
+} 
+100%{background:linear-gradient(120deg,#000,#ffcc00);} 
+}
+
 nav{
-  position:fixed;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:40px;
-  padding:15px 40px;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(15px);
-  border-radius:50px;
-  box-shadow:0 0 20px rgba(255,204,0,0.8);
-  z-index:1000;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:50px;
+padding:18px 50px;
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:100;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(15px);
+border-radius:50px;
+box-shadow:0 0 25px rgba(255,204,0,0.9);
+width:max-content;
+animation:navFade 1.5s ease;
+}
+
+@keyframes navFade{
+from{opacity:0;transform:translate(-50%,-20px);} 
+to{opacity:1;transform:translate(-50%,0);} 
 }
 
 nav a{
-  color:#ccc;
-  text-decoration:none;
-  font-size:18px;
-  padding:8px 18px;
-  border-radius:20px;
-  transition:0.3s;
+color:#ccc;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
 }
 
 nav a:hover{
-  color:#ffcc00;
-  text-shadow:0 0 10px #ffcc00;
+color:#ffcc00;
+text-shadow:0 0 10px #ffcc00;
 }
+nav a{color:#aaa;text-decoration:none;font-size:14px;}
+nav a:hover{color:#ffcc00;}
 
-nav a.active{
-  background:#ffcc00;
-  color:#000;
-  box-shadow:0 0 15px #ffcc00,0 0 30px #ffcc00;
-}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(120deg,#000 40%,#ffcc00 140%);} 
+.hero-text h1{font-size:90px;font-weight:800;letter-spacing:2px;text-transform:uppercase;}
+.hero-text h2{font-size:18px;color:#ddd;margin-top:10px;}
+.hero-text span{color:#ffcc00;}
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
+section{padding:80px 40px;position:relative;}
 
-.hero h1{
-  font-size:90px;
-  font-weight:800;
-}
-
-.hero h2{
-  font-size:20px;
-  margin-top:10px;
-}
-
-/* SECTIONS */
-section{padding:80px 40px;}
-
+section:nth-child(even){background:linear-gradient(120deg,#111,#1a1a1a);} 
+section:nth-child(odd){background:linear-gradient(120deg,#000,#141414);}
 .title{
-  font-size:40px;
-  margin-bottom:20px;
-  text-align:left;
+font-size:42px;
+margin-bottom:25px;
+text-align:left;
+animation:fadeUp 1s ease;
 }
 
-/* BOX */
-.box{
-  background:#111;
-  padding:20px;
-  border-radius:15px;
-  margin:15px 0;
-  transition:0.4s;
+.title:nth-of-type(1){color:#ffcc00;}
+.title:nth-of-type(2){color:#ff0055;}
+.title:nth-of-type(3){color:#00e0ff;}
+.title:nth-of-type(4){color:#00ff99;}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px);} 
+to{opacity:1;transform:translateY(0);} 
 }
+
+.box{background:#111;padding:20px;border-radius:15px;margin:10px 0;transition:0.4s;position:relative;overflow:hidden;}
+
+.box::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,204,0,0.4),transparent);transition:0.5s;}
+
+.box:hover::before{left:100%;}
 
 .box:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 20px #ffcc00;
+transform:scale(1.08);
+box-shadow:0 0 20px #ffcc00,0 0 40px #ffcc00;
 }
 
-.services,.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
 
-footer{text-align:center;padding:30px;color:#aaa;}
+.services, .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+
+footer{text-align:center;padding:30px;color:#888;}
 </style>
+<script>
+// simple scroll active nav
+const links = document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+ let fromTop = window.scrollY;
+ links.forEach(link=>{
+  let section = document.querySelector(link.getAttribute('href'));
+  if(section.offsetTop <= fromTop+100 && section.offsetTop + section.offsetHeight > fromTop+100){
+    link.style.color = '#ffcc00';
+  } else {
+    link.style.color = '#aaa';
+  }
+ });
+});
+</script>
 </head>
-
 <body>
 
 <nav>
-<a href="#home" class="active">Home</a>
-<a href="#services">Services</a>
-<a href="#skills">Skills</a>
-<a href="#study">Study</a>
-<a href="#goals">Goals</a>
-<a href="#contact">Contact</a>
+<a href="#home">HOME</a>
+<a href="#services">SERVICES</a>
+<a href="#skills">SKILLS</a>
+<a href="#study">STUDY</a>
+<a href="#contact">CONTACT</a>
 </nav>
 
 <div class="hero" id="home">
-<div>
-<h1>Freelancer.</h1>
+<div class="hero-text">
+<h1>Freelancer<span>.</span></h1>
 <h2>Ahmed & Hamza</h2>
 <p>Web Developer | UI UX Designer | Graphic Designer</p>
 </div>
@@ -143,37 +147,130 @@ footer{text-align:center;padding:30px;color:#aaa;}
 <section id="services">
 <h2 class="title">Services</h2>
 <div class="services">
-<div class="box"><h3>UI/UX Design</h3><p>Modern app & web UI, user-friendly design.</p></div>
-<div class="box"><h3>Web Development</h3><p>Responsive, animated websites.</p></div>
-<div class="box"><h3>Graphic Design</h3><p>Thumbnails, posters, branding.</p></div>
-<div class="box"><h3>Video Editing</h3><p>Professional edits, reels, shorts.</p></div>
-<div class="box"><h3>Script Writing</h3><p>Engaging scripts for videos.</p></div>
+
+<div class="box">
+<h3>UI & UX Design</h3>
+<p>Designing clean, modern, and user-friendly interfaces with strong focus on user experience, usability, and aesthetics.</p>
+<p><strong>Includes:</strong> Wireframes, prototypes, mobile UI, website UI, dashboards</p>
+<p><strong>Special:</strong> Smooth layouts, modern trends, user-focused design</p>
+</div>
+
+<div class="box">
+<h3>Web Development</h3>
+<p>Creating fast, responsive, and interactive websites using modern coding techniques.</p>
+<p><strong>Includes:</strong> Portfolio sites, landing pages, business websites</p>
+<p><strong>Special:</strong> Animations, hover effects, responsive design</p>
+</div>
+
+<div class="box">
+<h3>Graphic Designing</h3>
+<p>Creative and eye-catching designs for branding and social media growth.</p>
+<p><strong>Includes:</strong> Thumbnails, posters, social media posts, logos</p>
+<p><strong>Special:</strong> Trend-based and viral style designs</p>
+</div>
+
+<div class="box">
+<h3>Video Editing</h3>
+<p>Professional video editing with storytelling, effects, and smooth transitions.</p>
+<p><strong>Includes:</strong> YouTube videos, reels, shorts</p>
+<p><strong>Special:</strong> Fast-paced engaging edits</p>
+</div>
+
+<div class="box">
+<h3>Script Writing</h3>
+<p>Writing engaging scripts for videos to increase audience retention.</p>
+<p><strong>Includes:</strong> Hooks, storytelling, viral format scripts</p>
+<p><strong>Special:</strong> Content strategy + engagement focus</p>
+</div>
+
+<div class="box">
+<h3>Content Creation Strategy</h3>
+<p>Helping creators grow by planning content ideas and strategies.</p>
+<p><strong>Includes:</strong> Idea generation, content planning, growth tips</p>
+<p><strong>Special:</strong> Social media growth mindset</p>
+</div>
+
 </div>
 </section>
 
 <section id="skills">
-<h2 class="title">Skills</h2>
+<h2 class="title">Skills & Experience</h2>
 <div class="skills">
-<div class="box"><h3>UI/UX</h3><p>Advanced design skills</p></div>
-<div class="box"><h3>Web Dev</h3><p>HTML, CSS, JS Master</p></div>
-<div class="box"><h3>Graphic</h3><p>5+ years experience</p></div>
-<div class="box"><h3>Editing</h3><p>4+ years experience</p></div>
+
+<div class="box">
+<h3>UI/UX Design (Advanced)</h3>
+<p>Deep understanding of user behavior, layouts, spacing, and color psychology.</p>
+<p><strong>Skills:</strong> Wireframing, prototyping, user flow, modern UI trends</p>
+</div>
+
+<div class="box">
+<h3>Web Development (Master)</h3>
+<p>Ability to build modern, responsive, and animated websites.</p>
+<p><strong>Skills:</strong> HTML, CSS, JavaScript, animations, responsiveness</p>
+</div>
+
+<div class="box">
+<h3>Graphic Designing (5+ Years)</h3>
+<p>Strong creative skills with experience in social media and branding design.</p>
+<p><strong>Skills:</strong> Color theory, typography, composition</p>
+</div>
+
+<div class="box">
+<h3>Video Editing (4+ Years)</h3>
+<p>Editing engaging videos with smooth transitions and storytelling.</p>
+<p><strong>Skills:</strong> Cuts, effects, music sync, pacing</p>
+</div>
+
+<div class="box">
+<h3>Creative Thinking</h3>
+<p>Ability to generate unique ideas and solve problems creatively.</p>
+</div>
+
+<div class="box">
+<h3>Communication & Freelancing</h3>
+<p>Understanding client needs, delivering work on time, and maintaining quality.</p>
+</div>
+
 </div>
 </section>
 
 <section id="study">
 <h2 class="title">Study</h2>
 <div class="box">
-<p>APSACS Class 9 Students</p>
-<p>Ahmed: 85% | Hamza: 82%</p>
-<p>Skilled in computer and tech</p>
+<p>Ahmed & Hamza are students of APSACS (Army Public School & College System), currently studying in Class 9.</p>
+<p>Both students are hardworking, creative, and highly passionate about technology and digital skills.</p>
+
+<p><strong>Ahmed:</strong></p>
+<p>- Achieved 85+ marks (85%) in academic exams.</p>
+<p>- Strong in computer science and web technologies.</p>
+<p>- Skilled in designing, editing, and development.</p>
+
+<p><strong>Hamza:</strong></p>
+<p>- Achieved 82+ marks (82%) in academic exams.</p>
+<p>- Excellent understanding of concepts and creativity.</p>
+<p>- Strong skills in designing and technical work.</p>
+
+<p>Together, they form a powerful team with skills in web development, UI/UX design, graphic designing, and video editing.</p>
+<p>Their goal is to become successful entrepreneurs and build high-quality digital products in the future.</p>
 </div>
 </section>
 
 <section id="goals">
-<h2 class="title">Goals</h2>
+<h2 class="title">Our Goals</h2>
 <div class="box">
-<p>Become successful digital entrepreneurs and build strong tech careers.</p>
+<p>Ahmed & Hamza aim to become successful digital entrepreneurs by mastering modern technologies and creative skills.</p>
+
+<p><strong>Short-Term Goals:</strong></p>
+<p>- Build high-quality portfolio websites</p>
+<p>- Improve UI/UX and web development skills</p>
+<p>- Work on freelance projects and gain real-world experience</p>
+
+<p><strong>Long-Term Goals:</strong></p>
+<p>- Start their own digital agency</p>
+<p>- Create professional-level applications and websites</p>
+<p>- Become experts in design, development, and content creation</p>
+
+<p>They are continuously learning, improving, and working hard to achieve success in the digital world.</p>
 </div>
 </section>
 
@@ -181,22 +278,13 @@ footer{text-align:center;padding:30px;color:#aaa;}
 <h2 class="title">Contact</h2>
 <div class="box">
 <p>Email: ahmedgfx@gmail.com</p>
+<p>Available for freelance & entrepreneur work</p>
 </div>
 </section>
 
 <footer>
-© Ahmed & Hamza
+© Ahmed & Hamza Portfolio
 </footer>
-
-<script>
-const links = document.querySelectorAll("nav a");
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
-</script>
 
 </body>
 </html>
