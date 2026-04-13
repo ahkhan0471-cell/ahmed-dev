@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed & Hamza Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+body{
+  color:#fff;
+  animation:bgFade 8s ease-in-out infinite;
+}
+
+@keyframes bgFade{
+0%{background:linear-gradient(120deg,#000,#0f2027);} 
+50%{background:linear-gradient(120deg,#000,#2c5364);} 
+100%{background:linear-gradient(120deg,#000,#0f2027);} 
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:40px;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(15px);
+  border-radius:50px;
+  box-shadow:0 0 20px rgba(255,204,0,0.8);
+  z-index:1000;
+}
+
+nav a{
+  color:#ccc;
+  text-decoration:none;
+  font-size:18px;
+  padding:8px 18px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ffcc00;
+  text-shadow:0 0 10px #ffcc00;
+}
+
+nav a.active{
+  background:#ffcc00;
+  color:#000;
+  box-shadow:0 0 15px #ffcc00,0 0 30px #ffcc00;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:90px;
+  font-weight:800;
+}
+
+.hero h2{
+  font-size:20px;
+  margin-top:10px;
+}
+
+/* SECTIONS */
+section{padding:80px 40px;}
+
+.title{
+  font-size:40px;
+  margin-bottom:20px;
+  text-align:left;
+}
+
+/* BOX */
+.box{
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  margin:15px 0;
+  transition:0.4s;
+}
+
+.box:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 20px #ffcc00;
+}
+
+.services,.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+footer{text-align:center;padding:30px;color:#aaa;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home" class="active">Home</a>
+<a href="#services">Services</a>
+<a href="#skills">Skills</a>
+<a href="#study">Study</a>
+<a href="#goals">Goals</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<div>
+<h1>Freelancer.</h1>
+<h2>Ahmed & Hamza</h2>
+<p>Web Developer | UI UX Designer | Graphic Designer</p>
+</div>
+</div>
+
+<section id="services">
+<h2 class="title">Services</h2>
+<div class="services">
+<div class="box"><h3>UI/UX Design</h3><p>Modern app & web UI, user-friendly design.</p></div>
+<div class="box"><h3>Web Development</h3><p>Responsive, animated websites.</p></div>
+<div class="box"><h3>Graphic Design</h3><p>Thumbnails, posters, branding.</p></div>
+<div class="box"><h3>Video Editing</h3><p>Professional edits, reels, shorts.</p></div>
+<div class="box"><h3>Script Writing</h3><p>Engaging scripts for videos.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="title">Skills</h2>
+<div class="skills">
+<div class="box"><h3>UI/UX</h3><p>Advanced design skills</p></div>
+<div class="box"><h3>Web Dev</h3><p>HTML, CSS, JS Master</p></div>
+<div class="box"><h3>Graphic</h3><p>5+ years experience</p></div>
+<div class="box"><h3>Editing</h3><p>4+ years experience</p></div>
+</div>
+</section>
+
+<section id="study">
+<h2 class="title">Study</h2>
+<div class="box">
+<p>APSACS Class 9 Students</p>
+<p>Ahmed: 85% | Hamza: 82%</p>
+<p>Skilled in computer and tech</p>
+</div>
+</section>
+
+<section id="goals">
+<h2 class="title">Goals</h2>
+<div class="box">
+<p>Become successful digital entrepreneurs and build strong tech careers.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact</h2>
+<div class="box">
+<p>Email: ahmedgfx@gmail.com</p>
+</div>
+</section>
+
+<footer>
+© Ahmed & Hamza
+</footer>
+
+<script>
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+</script>
+
+</body>
+</html>
