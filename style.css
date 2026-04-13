@@ -38,3 +38,68 @@ nav a.active{
     0 0 20px #ffcc00,
     0 0 40px #ffcc00;
 }
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">SERVICES</a></li>
+    <li><a href="#">SKILLS</a></li>
+    <li><a href="#">STUDY</a></li>
+    <li><a href="#">CONTACT</a></li>
+  </ul>
+</nav>
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+/* Center items */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+/* Links style */
+.nav-links a {
+  text-decoration: none;
+  color: #d4af37; /* gold */
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect (Glow + Bigger) */
+.nav-links a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+  text-shadow: 
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffcc00,
+    0 0 40px #ffcc00;
+}
+
+/* Optional underline glow animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #ffd700;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
