@@ -1,15 +1,40 @@
-html::before {
-
+nav{
   position: fixed;
-  inset: 0;
-  z-index: -1;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  font-family: monospace;
-  opacity: 0.6;
-  background: rebeccapurple;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(255,204,0,0.6);
+}
+
+/* Normal links */
+nav a{
+  color: #ccc;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover glow */
+nav a:hover{
+  color: #ffcc00;
+  text-shadow: 0 0 8px #ffcc00;
+  box-shadow: 0 0 10px rgba(255,204,0,0.5);
+}
+
+/* Click / Active glow */
+nav a.active{
+  color: #000;
+  background: #ffcc00;
+  box-shadow: 
+    0 0 10px #ffcc00,
+    0 0 20px #ffcc00,
+    0 0 40px #ffcc00;
 }
